@@ -1,0 +1,5 @@
+kamakshi@kamakshi-ZenBook-Pro-15-UX550GE-UX550GE:~/Documents/enpm808x/week9/beginner_tutorials$ cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^
+./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./src/listener.cpp
+Done processing ./src/talker.cpp
+
