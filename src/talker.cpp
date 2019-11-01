@@ -38,7 +38,21 @@
 #include <sstream>
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "beginner_tutorials/change_string.h" 
 
+/**
+ * Initialize the base input string
+ */
+
+std::string strMsg = "Custom base string";
+
+bool changeString(beginner_tutorials::change_string::Request &req,
+		beginner_tutorials::change_string::Response &res) {
+    strMsg = req.input;
+    res.output  = req.input + ": modified";
+    ROS_INFO_STREAM("Modified the base output string message");
+    return true;
+}
 
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
@@ -81,7 +95,7 @@ int main(int argc, char **argv) {
    * buffer up before throwing some away.
    */
   auto chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
-
+  auto server = n.advertiseService("change_string", changeString);
   ros::Rate loop_rate(10);
 
   /**
@@ -96,7 +110,8 @@ int main(int argc, char **argv) {
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "first published message " << count;
+    //ss << "first published message " << count;
+    ss << "strMsg" << count;
     msg.data = ss.str();
 
     ROS_INFO("%s", msg.data.c_str());
