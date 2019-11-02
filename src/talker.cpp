@@ -54,8 +54,8 @@ extern std::string strMsg = "Customizing string using srv ";
   *
   * @return     boolean value after successful callback
   */
-bool changeString(const beginner_tutorials::change_string::Request &req,
-        const beginner_tutorials::change_string::Response &res) {
+bool changeString(beginner_tutorials::change_string::Request &req,
+        beginner_tutorials::change_string::Response &res) {
     strMsg = req.input;
     res.output = strMsg;             // modify the output string
     /* Info logger level message */
