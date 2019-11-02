@@ -30,7 +30,7 @@ If you do not have a catkin workspace:
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
-source devel/setup.bash
+source ~/catkin_ws/devel/setup.bash
 cd src/
 git clone https://github.com/kamakshijain/beginner_tutorials.git
 cd ..
