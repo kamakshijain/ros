@@ -3,3 +3,14 @@ kamakshi@kamakshi-ZenBook-Pro-15-UX550GE-UX550GE:~/Documents/enpm808x/week9/begi
 Done processing ./src/listener.cpp
 Done processing ./src/talker.cpp
 
+
+
+
+kamakshi@kamakshi-ZenBook-Pro-15-UX550GE-UX550GE:~/catkin_ws/src/Week10_HW/beginner$ cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -
+e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./src/listener.cpp
+./src/talker.cpp:57:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::change_string::Request &req  [runtime/references] [2]
+./src/talker.cpp:58:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::change_string::Response &res  [runtime/references] [2]
+Done processing ./src/talker.cpp
+Total errors found: 2
+
