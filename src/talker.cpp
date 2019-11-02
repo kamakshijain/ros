@@ -45,7 +45,7 @@
  * Initialize the base input string
  */
 
-extern std::string strMsg = "Custom base string";
+extern std::string strMsg = "Customizing string using srv ";
  /**
   * @brief      changeString
   *
@@ -54,15 +54,14 @@ extern std::string strMsg = "Custom base string";
   *
   * @return     boolean value after successful callback
   */
-bool changeString(beginner_tutorials::change_string::Request &req,
-        beginner_tutorials::change_string::Response &res) {
+bool changeString(const beginner_tutorials::change_string::Request &req,
+        const beginner_tutorials::change_string::Response &res) {
     strMsg = req.input;
     res.output = strMsg;             // modify the output string
     /* Info logger level message */
     ROS_INFO_STREAM("Modified the base output string message");
     return true;
 }
-
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */

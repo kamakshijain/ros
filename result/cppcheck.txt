@@ -6,3 +6,19 @@ Checking src/talker.cpp...
 2/2 files checked 100% done
 (information) Cppcheck cannot find all the include files (use --check-config for details)
 
+
+
+
+
+
+
+kamakshi@kamakshi-ZenBook-Pro-15-UX550GE-UX550GE:~/catkin_ws/src/Week10_HW/beginner$ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSyst
+em $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+(information) Couldn't find path given by -I 'include/'
+Checking src/listener.cpp...
+1/2 files checked 38% done
+Checking src/talker.cpp...
+2/2 files checked 100% done
+(information) Cppcheck cannot find all the include files (use --check-config for details)
+
+
