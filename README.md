@@ -20,7 +20,7 @@ To run this code in a catkin workspace:
 cd ~/catkin_ws/
 source devel/setup.bash
 cd src/
-git clone -b Week10_HW --single-branch https://github.com/kamakshijain/beginner_tutorials.git
+git clone https://github.com/kamakshijain/beginner_tutorials.git
 cd ~/catkin_ws/
 catkin_make
 ```
@@ -31,7 +31,7 @@ cd ~/catkin_ws/
 catkin_make
 source devel/setup.bash
 cd src/
-git clone -b Week10_HW --single-branch https://github.com/kamakshijain/beginner_tutorials.git
+git clone https://github.com/kamakshijain/beginner_tutorials.git
 cd ~/catkin_ws/
 catkin_make
 ```
