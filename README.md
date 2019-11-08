@@ -89,7 +89,7 @@ The output of rqt_console with info and warn logger level messages has been adde
 rqt_console
 ```
 
-##Running ROSTEST
+## Running ROSTEST
 
 Unit test cases for the project have been written using gtest and rostest. To run the tests using catkin go to to catkin workspace root directory and issue the following command:
 ```
