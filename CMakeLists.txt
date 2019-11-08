@@ -201,6 +201,12 @@ include_directories(
 #############
 ## Testing ##
 #############
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest_gtest(testTalker launch/testTalker.launch test/testTalker.cpp)
+  target_link_libraries(testTalker ${catkin_LIBRARIES})
+endif()
+  
 
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_beginner_tutorials.cpp)
