@@ -203,7 +203,7 @@ include_directories(
 #############
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  add_rostest_gtest(testTalker launch/testTalker.launch test/testTalker.cpp)
+  add_rostest_gtest(testTalker test/testTalker.launch test/testTalker.cpp)
   target_link_libraries(testTalker ${catkin_LIBRARIES})
 endif()
   
